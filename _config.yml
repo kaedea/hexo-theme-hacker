@@ -1,9 +1,8 @@
 menu:
-  Home: /
   Archives: /archives
   Categories: /categories
-  Tags: /tags
   About: /about
+  RSS: /atom.xml
 
 # gitment
 gitment: false
@@ -30,7 +29,7 @@ disqus: true
 disqus_shortname: kidhaibara
 
 # google analytics
-googleTrackId:
+googleTrackId: G-J38N5N288S
 
 # whether to show read more button when showing article in excerpt in main page
 read_more_btn: true
