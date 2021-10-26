@@ -44,7 +44,7 @@
       <% if (item.excerpt && index){ %>
         <%- item.excerpt %>
         <% if (theme.read_more_btn){ %>
-          <p><a class="excerpt-btn" href="<%- item.path %>"><span><%- __('read_more') %></span></a></p>
+          <p><a class="excerpt-btn" href="<%- config.root %><%- item.path %>"><span><%- __('read_more') %></span></a></p>
         <% } %>
       <% } else { %>
         <%- item.content %>
