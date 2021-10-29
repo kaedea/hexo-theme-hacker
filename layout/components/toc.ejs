@@ -1,0 +1,16 @@
+<% if (!index && ((post.toc != false && !is_page() && theme.toc.on) || post.toc)) { %>
+
+<div id="toc" class="toc-article">
+      <a class="js-toggle-toc" href="javascript:void(0)"></a>
+      <div class="toc-content">
+        <%- toc(post.content, {list_number: theme.toc.list_number}) %>
+      </div>
+</div>
+<style>
+        .toc-level-<%= theme.toc.max_depth %> i,
+        .toc-level-<%= theme.toc.max_depth %> ol {
+            display: none !important;
+        }
+    </style>
+
+<% } %>

@@ -4,6 +4,12 @@ menu:
   About: /about
   RSS: /atom.xml
 
+# Table of contents | 文章目录
+toc:
+  on: true
+  list_number: false # 目录序号
+  max_depth: 3  # 1 - 6 (h1-h6) 目录最大级数
+
 # gitment
 gitment: false
 gitment_owner:

@@ -47,6 +47,7 @@
           <p><a class="excerpt-btn" href="<%- config.root %><%- item.path %>"><span><%- __('read_more') %></span></a></p>
         <% } %>
       <% } else { %>
+        <%- partial('toc', {post: item}) %>
         <%- item.content %>
       <% } %>
     </div>
