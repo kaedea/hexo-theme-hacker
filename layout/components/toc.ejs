@@ -1,7 +1,22 @@
 <% if (!index && ((post.toc != false && !is_page() && theme.toc.on) || post.toc)) { %>
 
+<script type="text/javascript">
+    function convertRemToPixels(rem) {    
+        return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
+    }
+    window.onscroll = function() {
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        console.log("滚动距离" + scrollTop);
+        if (scrollTop > convertRemToPixels(40)) {
+            document.getElementsByClassName('toc-article')[0].style.visibility = 'visible';
+        } else {
+            document.getElementsByClassName('toc-article')[0].style.visibility = 'hidden';
+        }
+    }
+</script>
+
+
 <div id="toc" class="toc-article">
-      <a class="js-toggle-toc" href="javascript:void(0)"></a>
       <div class="toc-content">
         <%- toc(post.content, {list_number: theme.toc.list_number}) %>
       </div>
