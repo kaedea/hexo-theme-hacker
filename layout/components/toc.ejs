@@ -6,7 +6,6 @@
     }
     window.onscroll = function() {
         var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        console.log("滚动距离" + scrollTop);
         if (scrollTop > convertRemToPixels(40)) {
             document.getElementsByClassName('toc-article')[0].style.visibility = 'visible';
         } else {

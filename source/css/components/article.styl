@@ -2,7 +2,7 @@ $hackerRed = #9f353a
 $hackerGray = #9e9e9e
 $articleTitleColor = #212121
 $articleTextColor = #424242
-$articleCodeColor = #c7254e
+$articleCodeColor = #9f353a
 
 $articleTitleDarkColor = #f6f2f5
 $articleTextDarkColor = #fff
@@ -26,6 +26,10 @@ article
 
   a
     color $hackerRed
+
+    &:hover
+        span
+          box-shadow inset 0 -1px 0 rgba(240, 56, 56, 0.4)
 
   &:not(:first-child):before
     content ''
@@ -103,6 +107,13 @@ article
       time
         font-style italic
 
+  .article-content
+    a
+      &:hover
+        color $hackerGray
+        span
+          box-shadow inset 0 -1px 0 rgba(240, 56, 56, 0.4)
+
   .article-excerpt, .article-content, .featured-media
     margin 4rem 0
     font-size 1.6rem
@@ -119,10 +130,13 @@ article
       margin 1rem auto
 
   .article-footer
+    line-height 2.5rem
+
     .pull-left
       float left
     .pull-right
       float right
+      margin-left 3rem
 
     &:after
       content " "
@@ -167,12 +181,13 @@ article
 
 
   code
-    padding 2px 4px
+    padding 3px 6px
     margin-left 2px
     margin-right 2px
     color $articleCodeColor
     white-space normal
-    border-radius 0
+    border-radius 4px
+    background-color #ededed
 
   p
     margin 2rem 0
